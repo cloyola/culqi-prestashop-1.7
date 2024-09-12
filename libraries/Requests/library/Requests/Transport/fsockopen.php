@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Transport
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Transport_fsockopen implements Requests_Transport {
 	/**
 	 * Second to microsecond conversion

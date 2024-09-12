@@ -10,6 +10,11 @@
  *
  * @package Requests
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Response_Headers extends Requests_Utility_CaseInsensitiveDictionary {
 	/**
 	 * Get the given header

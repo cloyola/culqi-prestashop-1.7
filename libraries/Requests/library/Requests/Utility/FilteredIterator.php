@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Utility_FilteredIterator extends ArrayIterator {
 	/**
 	 * Callback to run as a filter

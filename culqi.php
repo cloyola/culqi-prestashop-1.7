@@ -141,13 +141,13 @@ class Culqi extends PaymentModule
 
             $this->context->controller->registerJavascript(
                 'sonicMastercard',
-                $this->_path.'views/brands/mastercard/mc-sonic.min.js?_='.time(),
+                $this->_path.'libraries/brands/mastercard/mc-sonic.min.js?_='.time(),
                 array('server' => 'remote', 'position' => 'bottom', 'priority' => 10000)
             );
             
             $this->context->controller->registerJavascript(
                 'sonicVisa',
-                $this->_path.'views/brands/visa/VisaSensoryBrandingSDK/visa-sensory-branding.js?_='.time(),
+                $this->_path.'libraries/brands/visa/VisaSensoryBrandingSDK/visa-sensory-branding.js?_='.time(),
                 array('server' => 'remote', 'position' => 'bottom', 'priority' => 10000)
             );
 
@@ -268,7 +268,7 @@ class Culqi extends PaymentModule
         if ($this->getConfigFieldsValues()['CULQI_ENABLED'] == 'yes') {
             $newOption->setModuleName($this->name)
                 ->setCallToActionText($this->trans('Culqi', array(), 'culqi'))
-                ->setLogo($this->_path.'/culqi-logo.svg')
+                ->setLogo($this->_path.'/views/img/culqi-logo.svg')
                 ->setAction($this->context->link->getModuleLink($this->name, 'postpayment', array(), true))
                 ->setAdditionalInformation($this->context->smarty->fetch('module:culqi/views/templates/hook/paymentCulqiView.tpl'));
             $payment_options = [
@@ -493,7 +493,7 @@ class Culqi extends PaymentModule
         if (!Configuration::get('CULQI_STATE_PENDING')) {
             $txt_state = 'En espera de pago por Culqi';
             $rows = Db::getInstance()->getValue($this->queryGetStates($txt_state));
-            if (intval($rows) == 0) {
+            if ((int) $rows == 0) {
                 $order_state = new OrderState();
                 $order_state->name = array();
                 foreach (Language::getLanguages() as $language) {
@@ -625,7 +625,7 @@ class Culqi extends PaymentModule
             $urlapi_webhook = URLAPI_WEBHOOK_PROD;
         }
         $post = 0;
-        if (isset($_GET['tab_module']) and $_GET['tab_module'] == 'payments_gateways') {
+        if (Tools::getIsset($_GET['tab_module']) and $_GET['tab_module'] == 'payments_gateways') {
             $post = 1;
         }
         $username = $this->generate_username();

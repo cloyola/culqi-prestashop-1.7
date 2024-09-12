@@ -14,6 +14,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_SSL {
 	/**
 	 * Verify the certificate against common name and subject alternative names

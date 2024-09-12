@@ -10,6 +10,11 @@
  * @see https://tools.ietf.org/html/rfc3490 IDNA specification
  * @see https://tools.ietf.org/html/rfc3492 Punycode/Bootstrap specification
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_IDNAEncoder {
 	/**
 	 * ACE prefix used for IDNA

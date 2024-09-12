@@ -12,6 +12,11 @@
  * Contains a response from Requests::request()
  * @package Requests
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Response {
 	/**
 	 * Constructor

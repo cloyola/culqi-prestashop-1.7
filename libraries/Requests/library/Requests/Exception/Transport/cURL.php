@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Exception_Transport_cURL extends Requests_Exception_Transport {
 
 	const EASY = 'cURLEasy';

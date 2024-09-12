@@ -18,6 +18,11 @@
  *
  * @package Requests
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests {
 	/**
 	 * POST method

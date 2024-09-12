@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
  class Requests_Utility_CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Actual item data

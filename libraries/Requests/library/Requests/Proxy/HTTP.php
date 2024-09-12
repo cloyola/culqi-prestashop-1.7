@@ -16,6 +16,11 @@
  * @subpackage Proxy
  * @since 1.6
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Proxy_HTTP implements Requests_Proxy {
 	/**
 	 * Proxy host and port

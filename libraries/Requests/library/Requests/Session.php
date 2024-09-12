@@ -17,6 +17,11 @@
  * @package Requests
  * @subpackage Session Handler
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Session {
 	/**
 	 * Base URL for requests

@@ -18,6 +18,11 @@
  * @package Requests
  * @subpackage Authentication
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface Requests_Auth {
 	/**
 	 * Register hooks as needed

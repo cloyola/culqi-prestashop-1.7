@@ -1,4 +1,7 @@
 <?php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
 class CulqiWebHookModuleFrontController extends ModuleFrontController
 {
@@ -11,7 +14,7 @@ class CulqiWebHookModuleFrontController extends ModuleFrontController
     public function displayAjax()
     {
         Logger::addLog('Inicio weebhook');
-        $postBody = file_get_contents("php://input");
+        $postBody = Tools::file_get_contents("php://input");
         $headers = getallheaders();
         $headers = $headers['Authorization'];
         if(!isset($headers)){

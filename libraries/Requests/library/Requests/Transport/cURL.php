@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Transport
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Transport_cURL implements Requests_Transport {
 	const CURL_7_10_5 = 0x070A05;
 	const CURL_7_16_2 = 0x071002;

@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface Requests_Hooker {
 	/**
 	 * Register a callback for a hook

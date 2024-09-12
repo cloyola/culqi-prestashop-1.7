@@ -605,18 +605,18 @@ $(document).ready(function () {
             var parrafo = document.querySelector('.culqi-checkout-text');
             var logos = '';
             if (tarjeta) {
-                logos = logos + '<img  style="margin-right: 5px" src="/modules/culqi/cards.svg" />';
+                logos = logos + '<img  style="margin-right: 5px" src="/modules/culqi/views/img/cards.svg" />';
                 txt = txt + 'tarjetas de débito y crédito';
             }
             if (yape) {
-                logos = logos + '<img style="margin-right: 5px" src="/modules/culqi/yape.svg" />';
+                logos = logos + '<img style="margin-right: 5px" src="/modules/culqi/views/img/yape.svg" />';
                 if (tarjeta) {
                     txt = txt + ', ';
                 }
                 txt = txt + 'Yape';
             }
             if (agente || bancaMovil || billetera || cuotealo) {
-                logos = logos + '<img  style="margin-right: 5px" src="/modules/culqi/pagoefectivo.svg" />';
+                logos = logos + '<img  style="margin-right: 5px" src="/modules/culqi/views/img/pagoefectivo.svg" />';
                 if (tarjeta || yape) {
                     txt = txt + ', ';
                 }

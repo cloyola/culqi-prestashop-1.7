@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Transport
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface Requests_Transport {
 	/**
 	 * Perform a request

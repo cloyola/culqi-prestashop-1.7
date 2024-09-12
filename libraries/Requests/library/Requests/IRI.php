@@ -63,6 +63,11 @@
  * @property string $fragment Fragment, formatted for a URI (after '#')
  * @property string $ifragment Fragment part of the IRI (after '#')
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_IRI {
 	/**
 	 * Scheme

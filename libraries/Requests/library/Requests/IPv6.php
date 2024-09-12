@@ -15,6 +15,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_IPv6 {
 	/**
 	 * Uncompresses an IPv6 address

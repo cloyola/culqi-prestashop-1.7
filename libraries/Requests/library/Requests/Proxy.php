@@ -20,6 +20,11 @@
  * @subpackage Proxy
  * @since 1.6
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface Requests_Proxy {
 	/**
 	 * Register hooks as needed

@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Utilities
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Hooks implements Requests_Hooker {
 	/**
 	 * Registered callbacks for each hook

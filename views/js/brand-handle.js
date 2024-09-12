@@ -22,7 +22,7 @@ const fnBrandvisa = (success_url) => {
     </div>`);
 
     VisaSensoryBranding.init({}, 
-    `${modulePath}views/brands/visa/VisaSensoryBrandingSDK`);
+    `${modulePath}libraries/brands/visa/VisaSensoryBrandingSDK`);
 
     document.getElementById('visa-sensory-branding').addEventListener('visa-sensory-branding-end', function(e) {
         setTimeout(() => {

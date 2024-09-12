@@ -12,6 +12,11 @@
  * @package Requests
  * @subpackage Cookies
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Cookie {
 	/**
 	 * Cookie name.

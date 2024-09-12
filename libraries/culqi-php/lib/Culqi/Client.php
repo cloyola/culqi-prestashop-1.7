@@ -1,4 +1,9 @@
 <?php
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 namespace Culqi;
 
 use Culqi\Error as Errors;

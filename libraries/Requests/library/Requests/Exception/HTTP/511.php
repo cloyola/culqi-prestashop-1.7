@@ -12,6 +12,11 @@
  * @see https://tools.ietf.org/html/rfc6585
  * @package Requests
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Exception_HTTP_511 extends Requests_Exception_HTTP {
 	/**
 	 * HTTP status code

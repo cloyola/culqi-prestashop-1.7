@@ -15,6 +15,11 @@
  * @package Requests
  * @subpackage Authentication
  */
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class Requests_Auth_Basic implements Requests_Auth {
 	/**
 	 * Username
