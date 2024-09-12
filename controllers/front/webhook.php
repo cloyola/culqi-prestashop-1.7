@@ -30,7 +30,7 @@ class CulqiWebHookModuleFrontController extends ModuleFrontController
         }
         $postBody = json_decode($postBody, true);
         $data = json_decode($postBody["data"], true);
-        Logger::addLog('$data ' . serialize($data));
+        Logger::addLog('$data ' . json_encode($data));
         $currencyCode = trim($data['currency_code']);
         $state = trim($data['state']);
         $amount = trim($data['amount']);

@@ -625,7 +625,7 @@ class Culqi extends PaymentModule
             $urlapi_webhook = URLAPI_WEBHOOK_PROD;
         }
         $post = 0;
-        if (Tools::getIsset($_GET['tab_module']) and $_GET['tab_module'] == 'payments_gateways') {
+        if (Tools::getIsset($Tools::getValue['tab_module']) and Tools::getValue['tab_module'] == 'payments_gateways') {
             $post = 1;
         }
         $username = $this->generate_username();

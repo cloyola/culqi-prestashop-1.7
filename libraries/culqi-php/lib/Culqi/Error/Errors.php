@@ -1,11 +1,9 @@
 <?php
+namespace Culqi\Error;
 
 if (!defined('_PS_VERSION_')) {
     exit;
 }
-
-namespace Culqi\Error;
-
 /**
  * Culqi Exceptions
  */

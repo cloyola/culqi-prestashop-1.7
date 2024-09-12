@@ -188,7 +188,7 @@ class Requests {
 		// @codeCoverageIgnoreStart
 		// array of capabilities as a string to be used as an array key
 		ksort($capabilities);
-		$cap_string = serialize($capabilities);
+		$cap_string = json_encode($capabilities);
 
 		// Don't search for a transport if it's already been done for these $capabilities
 		if (isset(self::$transport[$cap_string]) && self::$transport[$cap_string] !== null) {
