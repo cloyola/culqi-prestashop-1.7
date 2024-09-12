@@ -118,11 +118,6 @@ class Culqi extends PaymentModule
                 array('server' => 'remote', 'position' => 'bottom', 'priority' => 10000)
             );
 
-            $data = json_encode($this->getCulqiInfoCheckout(false, true));
-            $jsCode = "<script>
-                var phpData = {$data};
-            </script>";
-
             $this->context->controller->registerJavascript(
                 'brandFunctions',
                 $this->_path.'views/js/brand-handle.js?_='.time(),
@@ -168,9 +163,12 @@ class Culqi extends PaymentModule
                   'priority' => 200,
                 ]
             );
-    
 
-            return $jsCode;
+            $data = json_encode($this->getCulqiInfoCheckout(false, true));
+            if($data)
+                $this->smarty->assign(array('phpData' => $data));
+    
+            return $this->display(__FILE__, 'header.tpl');
         }
     }
 
